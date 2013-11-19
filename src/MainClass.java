@@ -31,7 +31,7 @@ public class MainClass {
         data.setCookArrayList(new ArrayList<Cook>());
 
         //create the lock objects for cook class , same lock object on different threads
-        static
+
 
         //set the diners
         for(int i = 1 ; i <= data.getNumberOfDiners() ; i++)
