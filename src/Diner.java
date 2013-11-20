@@ -1,6 +1,3 @@
-import java.util.concurrent.BlockingDeque;
-import java.util.concurrent.BlockingQueue;
-
 /**
  * Created with IntelliJ IDEA.
  * User: bunkmaster
@@ -10,17 +7,14 @@ import java.util.concurrent.BlockingQueue;
  */
 public class Diner extends Thread {
 
-    private  int customerNumber;
+    private int customerNumber;
     private int arrivalTime;
     private Order order;
     private Table table;
-    public static  ManageTables manageTables;
+    public static ManageTables manageTables;
     public static ManageOrders manageOrders;
     private long dinerWaitTime;
     private boolean running;
-
-
-
 
 
     //Properties
@@ -52,7 +46,6 @@ public class Diner extends Thread {
     }
 
 
-
     public ManageTables getManageTables() {
         return manageTables;
     }
@@ -60,8 +53,6 @@ public class Diner extends Thread {
     public void setManageTables(ManageTables manageTables) {
         this.manageTables = manageTables;
     }
-
-
 
 
     public int getCustomerNumber() {
@@ -88,53 +79,42 @@ public class Diner extends Thread {
         this.order = order;
     }
 
-    public Diner(int customerNum, int arrivalTime, Order order)
-    {
-        this.customerNumber = customerNum ;
-        this.arrivalTime = arrivalTime ;
+    public Diner(int customerNum, int arrivalTime, Order order) {
+        this.customerNumber = customerNum;
+        this.arrivalTime = arrivalTime;
         this.order = order;
     }
 
-    public Diner( int arrivalTime, Order order)
-    {
-        this.customerNumber = 0 ;
-        this.arrivalTime = arrivalTime ;
+    public Diner(int arrivalTime, Order order) {
+        this.customerNumber = 0;
+        this.arrivalTime = arrivalTime;
         this.order = order;
 
     }
-
 
 
     //invoke this function when customer gets table and pass on the order to a common buffer
-    public void gotTable(Table table)
-    {
-        try
-        {
+    public void gotTable(Table table) {
+        try {
             //put the order in the queue, the customerNumber for the order is set in InitiateThreads function
             this.table = table;
             this.manageOrders.putOrder(order);
             System.out.println(this.customerNumber + " has got table " + this.table.getTableNumber() +
-            " and set the order: burgers:  " +order.burgers + " fries: " + order.fries + " coke: " + order.coke );
-        }
-        catch (Exception e)
-        {
-           System.out.println("Error in setting the order");
+                    " and set the order: burgers:  " + order.burgers + " fries: " + order.fries + " coke: " + order.coke);
+        } catch (Exception e) {
+            System.out.println("Error in setting the order");
         }
 
     }
 
     //this function is to be invoked by the cook when order of the customer is complete
-    public void orderComplete()
-    {
-        try
-        {
+    public void orderComplete() {
+        try {
             this.wait(getDinerWaitTime());
             manageTables.doneEating(this);
             running = false;
-           // this.join();
-        }
-        catch (Exception e)
-        {
+            // this.join();
+        } catch (Exception e) {
 
         }
 
@@ -149,9 +129,8 @@ public class Diner extends Thread {
 
 
     @Override
-    public void run()
-    {
-            super.run();
-            this.manageTables.setCustomer(this);
+    public void run() {
+        super.run();
+        this.manageTables.setCustomer(this);
     }
 }

@@ -1,34 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Cook.java" line="203" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/Cook.java" line="184" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="d81d3619-1588-40e8-b290-48431ed0a242" name="Default" comment="">
+    <list default="true" id="d81d3619-1588-40e8-b290-48431ed0a242" name="Default" comment="working cook class.&#10;added cook.class as synchronization object.&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cook.java" afterPath="$PROJECT_DIR$/src/Cook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data.java" afterPath="$PROJECT_DIR$/src/Data.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Diner.java" afterPath="$PROJECT_DIR$/src/Diner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DinerComparator.java" afterPath="$PROJECT_DIR$/src/DinerComparator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainClass.java" afterPath="$PROJECT_DIR$/src/MainClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ManageOrders.java" afterPath="$PROJECT_DIR$/src/ManageOrders.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ManageTables.java" afterPath="$PROJECT_DIR$/src/ManageTables.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Order.java" afterPath="$PROJECT_DIR$/src/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Table.java" afterPath="$PROJECT_DIR$/src/Table.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\projects\Restaurant6431\src\Machine.java" afterPath="$PROJECT_DIR$/src/MachineSingleton.java" />
     </list>
     <list id="acb0dc96-fbf5-4b08-8000-dc20fa747ad6" name="New changelist" comment="" />
     <ignored path="Restaurant6431.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/MainClass.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384853905635" ignored="false" />
+    <file path="/MainClass.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384938286080" ignored="false" />
     <file path="/TypeScript File.txt.ft" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384025007825" ignored="false" />
     <file path="/Customer.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384067042326" ignored="false" />
     <file path="$PROJECT_DIR$/../Homework2/Q1/src/Main.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384025851515" ignored="false" />
     <file path="/Main.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384025842676" ignored="false" />
-    <file path="/Cook.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384681174624" ignored="false" />
+    <file path="/Cook.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384940842665" ignored="false" />
     <file path="/Order.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384677284120" ignored="false" />
     <file path="/Data.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384149386839" ignored="false" />
-    <file path="/fragment.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384229536024" ignored="false" />
+    <file path="/fragment.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384927124580" ignored="false" />
     <file path="/Diner.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384674310985" ignored="false" />
     <file path="/DinerComparator.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384052721852" ignored="false" />
     <file path="/Table.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384065933199" ignored="false" />
     <file path="/ManageTables.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384498512493" ignored="false" />
     <file path="/ManageOrder.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384110751799" ignored="false" />
-    <file path="/Machine.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384679255625" ignored="false" />
+    <file path="/Machine.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384942485123" ignored="false" />
     <file path="/ManageOrders.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384269325439" ignored="false" />
-    <file path="/Dummy.txt" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384854209000" ignored="false" />
+    <file path="/Dummy.txt" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384944550951" ignored="false" />
+    <file path="/MachineSingleton.java" changelist="d81d3619-1588-40e8-b290-48431ed0a242" time="1384942486834" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +50,9 @@
     <rightPanel />
     <splitter proportion="0.5" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Restaurant6431$MainClass.coverage" NAME="MainClass Coverage Results" MODIFIED="1384929178488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -48,6 +60,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -84,24 +98,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/Cook.java" line="205" class="Cook" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -111,19 +107,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainClass.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="923" selection-end="923" vertical-scroll-proportion="0.30091184">
+            <state line="71" column="24" selection-start="2426" selection-end="2426" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Machine.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Machine.java">
+      <file leaf-file-name="Data.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="63" selection-start="2035" selection-end="2110" vertical-scroll-proportion="0.0">
+            <state line="28" column="5" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MachineSingleton.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MachineSingleton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="126" column="20" selection-start="3628" selection-end="3632" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,7 +137,7 @@
       <file leaf-file-name="Cook.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="39" selection-start="523" selection-end="632" vertical-scroll-proportion="0.0">
+            <state line="179" column="0" selection-start="5477" selection-end="5477" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,10 +152,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Order.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="0" selection-start="3209" selection-end="3209" vertical-scroll-proportion="0.0">
+            <state line="72" column="0" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.06111111">
               <folding />
             </state>
           </provider>
@@ -159,7 +164,7 @@
       <file leaf-file-name="ManageTables.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ManageTables.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="30" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
+            <state line="32" column="30" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -168,7 +173,7 @@
       <file leaf-file-name="DinerComparator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DinerComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="3" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+            <state line="10" column="3" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -177,7 +182,7 @@
       <file leaf-file-name="ManageOrders.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ManageOrders.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="3" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+            <state line="3" column="3" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -186,7 +191,7 @@
       <file leaf-file-name="Diner.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Diner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="53" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.0">
+            <state line="102" column="0" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -221,8 +226,9 @@
         <option value="$PROJECT_DIR$/src/Diner.java" />
         <option value="$PROJECT_DIR$/src/Order.java" />
         <option value="$PROJECT_DIR$/src/Machine.java" />
-        <option value="$PROJECT_DIR$/src/Cook.java" />
         <option value="$PROJECT_DIR$/src/MainClass.java" />
+        <option value="$PROJECT_DIR$/src/Cook.java" />
+        <option value="$PROJECT_DIR$/src/MachineSingleton.java" />
       </list>
     </option>
   </component>
@@ -263,6 +269,20 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restaurant6431" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restaurant6431" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -297,20 +317,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant6431" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant6431" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -353,12 +359,14 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Restaurant6431" />
       <envs />
+      <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -494,6 +502,11 @@
       <created>1384024707906</created>
       <updated>1384024707906</updated>
     </task>
+    <task id="LOCAL-00001" summary="demo check in with IntellijIdea.&#10;No change in the source code">
+      <created>1384854340283</created>
+      <updated>1384854340283</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -520,33 +533,34 @@
     <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5994152" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.67009133" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4086758" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56786704" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295302" sideWeight="0.67155427" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844576" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24966443" sideWeight="0.6158358" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40762463" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39954337" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.67009133" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.67009133" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24966443" sideWeight="0.4005848" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844576" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="91" y="91" width="1732" height="850" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.67009133" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3841642" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844576" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.67009133" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2966443" sideWeight="0.67155427" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295302" sideWeight="0.67155427" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24966443" sideWeight="0.6158358" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5439883" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="91" y="91" width="1732" height="850" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -591,7 +605,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="working cook class.&#10;added cook.class as synchronization object.&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -605,9 +619,15 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="demo check in with IntellijIdea.&#10;No change in the source code" />
+    <MESSAGE value="working cook class.&#10;added cook.class as synchronization object.&#10;" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -645,13 +665,6 @@
         <state line="488" column="134" selection-start="9862" selection-end="9862" vertical-scroll-proportion="12.857485" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="5" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="683" column="0" selection-start="25677" selection-end="25677" vertical-scroll-proportion="0.0" />
@@ -659,21 +672,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DinerComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+        <state line="10" column="3" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ManageOrders.java">
+    <entry file="file://$PROJECT_DIR$/src/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+        <state line="28" column="5" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ManageTables.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="30" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
+        <state line="32" column="30" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="24" selection-start="2426" selection-end="2426" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -685,37 +705,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/Cook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="0" selection-start="3209" selection-end="3209" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Machine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="63" selection-start="2035" selection-end="2110" vertical-scroll-proportion="0.0">
+        <state line="179" column="0" selection-start="5477" selection-end="5477" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Diner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="53" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.0">
+        <state line="102" column="0" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cook.java">
+    <entry file="file://$PROJECT_DIR$/src/ManageOrders.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="523" selection-end="632" vertical-scroll-proportion="0.0">
+        <state line="3" column="3" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClass.java">
+    <entry file="file://$PROJECT_DIR$/src/MachineSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="923" selection-end="923" vertical-scroll-proportion="0.30091184">
+        <state line="126" column="20" selection-start="3628" selection-end="3632" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.06111111">
           <folding />
         </state>
       </provider>

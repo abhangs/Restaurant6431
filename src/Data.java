@@ -7,13 +7,11 @@ import java.util.ArrayList;
  * Time: 9:27 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Data
-{
-
+public class Data {
 
 
     ArrayList<Cook> cookArrayList;
-    ArrayList<Diner> dinerArrayList ;
+    ArrayList<Diner> dinerArrayList;
     ArrayList<Table> tableArrayList;
     int numberOfDiners;
     int numberOfTables;

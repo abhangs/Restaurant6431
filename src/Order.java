@@ -85,37 +85,37 @@ public class Order {
         this.cokeDone = cokeDone;
     }
 
-    public Order(int customerNum,int cookNum, int burgers , int fries , int coke)
+    public Order(int customerNum, int cookNum, int burgers, int fries, int coke)
 
     {
-        this.customerNumber = customerNum ;
-        this.cookNumber = cookNum ;
+        this.customerNumber = customerNum;
+        this.cookNumber = cookNum;
         this.burgers = burgers;
         this.fries = fries;
         this.coke = coke;
     }
 
-    public Order(int customerNum,int burgers , int fries , int coke)
+    public Order(int customerNum, int burgers, int fries, int coke)
 
     {
-        this.customerNumber = customerNum ;
-        this.cookNumber = 0 ;
+        this.customerNumber = customerNum;
+        this.cookNumber = 0;
         this.burgers = burgers;
         this.fries = fries;
         this.coke = coke;
     }
 
-    public Order(int burgers , int fries , int coke)
+    public Order(int burgers, int fries, int coke)
 
     {
-        this.customerNumber = 0 ;
-        this.cookNumber = 0 ;
+        this.customerNumber = 0;
+        this.cookNumber = 0;
         this.burgers = burgers;
         this.fries = fries;
         this.coke = coke;
-        if(fries>0)
-            isFriesOrdered =true;
-        if(coke > 0)
+        if (fries > 0)
+            isFriesOrdered = true;
+        if (coke > 0)
             isCokeOrdered = true;
     }
 
@@ -124,52 +124,46 @@ public class Order {
     public Boolean isFries()
 
     {
-        if(!isFriesOrdered)
+        if (!isFriesOrdered)
             return false;
         else
             return true;
     }
 
     //check if coke is ordered
-    public Boolean isCoke()
-    {
-        if(!isCokeOrdered)
+    public Boolean isCoke() {
+        if (!isCokeOrdered)
             return false;
         else
             return true;
     }
 
     //check if the processing of order is complete
-    public boolean isOrderDone()
-    {
-       //need to do this for different combination of orders
-       //can implement a stack here to check for orders done
-       if(isBurgersDone() == true)
-       {
-           if(isFries() ==true )
-           {
-             if(isCoke() == true )
-             {
-                 if(isCokeDone()==true && isFriesDone() == true )
-                     return true;
+    public boolean isOrderDone() {
+        //need to do this for different combination of orders
+        //can implement a stack here to check for orders done
+        if (isBurgersDone() == true) {
+            if (isFries() == true) {
+                if (isCoke() == true) {
+                    if (isCokeDone() == true && isFriesDone() == true)
+                        return true;
 
-                 else
+                    else
+                        return false;
+                }
+
+                if (isFriesDone() == true)
+                    return true;
+                else return false;
+
+            }
+
+            if (isCoke() == true) {
+                if (isCokeDone() == true)
+                    return true;
+                else
                     return false;
-             }
-
-             if(isFriesDone() == true)
-                 return true;
-               else return false;
-
-           }
-
-           if(isCoke() ==true )
-           {
-               if(isCokeDone() ==true )
-                   return true;
-               else
-                   return false;
-           }
+            }
 
         }
 
@@ -177,39 +171,32 @@ public class Order {
     }
 
     //set values accordingly for processing each item
-    public void processingOrder(String itemType)
-    {
-       try {
-           if(itemType.toLowerCase().equals("burger") )
-           {
-               burgers--;
-               if(burgers==0)
-                   setBurgersDone(true);
-           }
-           if(itemType.toLowerCase().equals("fries") )
-           {
-               if(isFries() ==true  )
-               {
-               fries--;
-               if(fries==0)
-                   setFriesDone(true);
-                }
-           }
-
-           if(itemType.toLowerCase().equals("coke"))
-           {
-               if(isCoke() ==true ){
-               coke--;
-               if(coke==0)
-                   setCokeDone(true);
-
+    public void processingOrder(String itemType) {
+        try {
+            if (itemType.toLowerCase().equals("burger")) {
+                burgers--;
+                if (burgers == 0)
+                    setBurgersDone(true);
             }
-           }
-       }
-       catch (Exception e)
-       {
-         System.out.println("error processing order!");
-       }
+            if (itemType.toLowerCase().equals("fries")) {
+                if (isFries() == true) {
+                    fries--;
+                    if (fries == 0)
+                        setFriesDone(true);
+                }
+            }
+
+            if (itemType.toLowerCase().equals("coke")) {
+                if (isCoke() == true) {
+                    coke--;
+                    if (coke == 0)
+                        setCokeDone(true);
+
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("error processing order!");
+        }
 
 
     }

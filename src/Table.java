@@ -35,16 +35,14 @@ public class Table {
         isAvailable = available;
     }
 
-    public Table (int tableNumber , int customerNumber , boolean available)
-    {
-        this.setTableNumber(tableNumber );
+    public Table(int tableNumber, int customerNumber, boolean available) {
+        this.setTableNumber(tableNumber);
         this.setCustomerNumber(customerNumber);
         this.setAvailable(available);
     }
 
-    public Table (int tableNumber ,boolean available)
-    {
-        this.setTableNumber(tableNumber );
+    public Table(int tableNumber, boolean available) {
+        this.setTableNumber(tableNumber);
         this.setCustomerNumber(0);
         this.setAvailable(available);
     }

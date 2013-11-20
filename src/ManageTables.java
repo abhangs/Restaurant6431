@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,20 +19,15 @@ public class ManageTables {
 
     ArrayList<Table> tableArrayList;
 
-    public ManageTables(ArrayList<Table> numOfTables)
-    {
+    public ManageTables(ArrayList<Table> numOfTables) {
         this.setTableArrayList(numOfTables);
     }
 
 
-    public synchronized void setCustomer(Diner diner)
-    {
-        try
-        {
-            for(Table t : tableArrayList )
-            {
-                if(t.isAvailable() == true )
-                {
+    public synchronized void setCustomer(Diner diner) {
+        try {
+            for (Table t : tableArrayList) {
+                if (t.isAvailable() == true) {
                     t.setAvailable(false);
                     t.setCustomerNumber(diner.getCustomerNumber());
                     diner.gotTable(t);
@@ -42,37 +35,29 @@ public class ManageTables {
                 }
             }
 
-            if(diner.getTable()==null )
-            {
+            if (diner.getTable() == null) {
                 diner.wait();
-                System.out.println( diner.getCustomerNumber() + " is waiting for a table");
+                System.out.println(diner.getCustomerNumber() + " is waiting for a table");
             }
 
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
 
         }
     }
 
     //implement code when diner is done eating
-    public synchronized void doneEating(Diner diner)
-    {
-       try
-       {
-             for(Table t: tableArrayList )
-             {
-                 if(t.getTableNumber() == diner.getTable().getTableNumber() )
-                     t.setAvailable(true);
-                     notify();
-                 break;
-             }
-       }
-       catch (Exception e)
-       {
+    public synchronized void doneEating(Diner diner) {
+        try {
+            for (Table t : tableArrayList) {
+                if (t.getTableNumber() == diner.getTable().getTableNumber())
+                    t.setAvailable(true);
+                notify();
+                break;
+            }
+        } catch (Exception e) {
 
-       }
+        }
     }
 
 
