@@ -14,12 +14,24 @@ public class Order {
     int fries;
     int coke;
 
+
+    boolean setOrderDone;
+
     boolean burgersDone;
     boolean friesDone;
     boolean cokeDone;
 
     boolean isFriesOrdered;
     boolean isCokeOrdered;
+
+    public synchronized boolean isSetOrderDone() {
+        return setOrderDone;
+    }
+
+    public synchronized void setSetOrderDone(boolean setOrderDone) {
+        this.setOrderDone = setOrderDone;
+    }
+
 
     public int getCustomerNumber() {
         return customerNumber;

@@ -7,15 +7,24 @@
  */
 public class Diner extends Thread {
 
-    private int customerNumber;
+    private int dinerNumber;
     private int arrivalTime;
     private Order order;
     private Table table;
     public static ManageTables manageTables;
     public static ManageOrders manageOrders;
     private long dinerWaitTime;
-    private boolean running;
+    boolean isSeated;
 
+
+
+   public boolean isSeated() {
+        return isSeated;
+    }
+
+    public void setSeated(boolean seated) {
+        isSeated = seated;
+    }
 
     //Properties
 
@@ -55,12 +64,12 @@ public class Diner extends Thread {
     }
 
 
-    public int getCustomerNumber() {
-        return customerNumber;
+    public int getDinerNumber() {
+        return dinerNumber;
     }
 
-    public void setCustomerNumber(int customerNumber) {
-        this.customerNumber = customerNumber;
+    public void setDinerNumber(int dinerNumber) {
+        this.dinerNumber = dinerNumber;
     }
 
     public int getArrivalTime() {
@@ -80,13 +89,13 @@ public class Diner extends Thread {
     }
 
     public Diner(int customerNum, int arrivalTime, Order order) {
-        this.customerNumber = customerNum;
+        this.dinerNumber = customerNum;
         this.arrivalTime = arrivalTime;
         this.order = order;
     }
 
     public Diner(int arrivalTime, Order order) {
-        this.customerNumber = 0;
+        this.dinerNumber = 0;
         this.arrivalTime = arrivalTime;
         this.order = order;
 
@@ -96,11 +105,13 @@ public class Diner extends Thread {
     //invoke this function when customer gets table and pass on the order to a common buffer
     public void gotTable(Table table) {
         try {
-            //put the order in the queue, the customerNumber for the order is set in InitiateThreads function
+            //put the order in the queue, the dinerNumber for the order is set in InitiateThreads function
             this.table = table;
             this.manageOrders.putOrder(order);
-            System.out.println(this.customerNumber + " has got table " + this.table.getTableNumber() +
-                    " and set the order: burgers:  " + order.burgers + " fries: " + order.fries + " coke: " + order.coke);
+            this.setSeated(true);
+            System.out.println(this.dinerNumber + " has got table " + this.table.getTableNumber() +
+                    " and set the order: burgers:  " + order.burgers + " fries: " + order.fries + " coke: " + order.coke
+            + " at: " + TimeManager.getCurrentTime());
         } catch (Exception e) {
             System.out.println("Error in setting the order");
         }
@@ -109,12 +120,18 @@ public class Diner extends Thread {
 
     //this function is to be invoked by the cook when order of the customer is complete
     public void orderComplete() {
-        try {
-            this.wait(getDinerWaitTime());
+        try
+        {
+            synchronized (Diner.class)
+            {
+            wait(getDinerWaitTime());
             manageTables.doneEating(this);
-            running = false;
-            // this.join();
-        } catch (Exception e) {
+            System.out.println(this.getDinerNumber() + " has done eating and left table");
+            //running = false;
+            //this.join();
+            }
+        } catch (Exception e)
+        {
 
         }
 
@@ -123,14 +140,37 @@ public class Diner extends Thread {
     @Override
     public synchronized void start() {
         super.start();
-        System.out.println("Diner Thread: " + this.customerNumber + " has started");
+        System.out.println("Diner Thread: " + this.dinerNumber + " has started at " + TimeManager.getCurrentTime());
 
     }
 
 
     @Override
-    public void run() {
+    public void run()
+    {
         super.run();
-        this.manageTables.setCustomer(this);
+        try
+        {
+
+            while (!this.isSeated())
+            {
+                this.getManageTables().setCustomer(this);
+            }
+
+            while (!order.isSetOrderDone())
+            {
+               //wait();
+            }
+            System.out.println("Diner " + this.getDinerNumber() + " started eating at: "+ TimeManager.getCurrentTime());
+            Thread.sleep(4000);
+            this.getManageTables().doneEating(this);
+
+        }
+        catch (Exception e)
+        {
+
+        }
+
+
     }
 }

@@ -123,11 +123,12 @@ public class MachineSingleton {
         try {
             synchronized (Cook.class) {
                 this.setMachine1Available(false);
-                System.out.println(c.getCookNumber() + "got machine 1" + " " + new Date().getTime());
+                //System.out.println(c.getCookNumber() + "got machine 1" + " " + new Date().getTime());
                 Cook.class.wait(this.machine1WaitTime);
                 o.processingOrder("burger");
                 this.setMachine1Available(true);
-                System.out.println(c.getCookNumber() + "released machine 1" + " " + new Date().getTime());
+                //System.out.println(c.getCookNumber() + "released machine 1" + " " + new Date().getTime());
+
             }
         } catch (Exception e) {
 
@@ -140,11 +141,11 @@ public class MachineSingleton {
         try {
             synchronized (Cook.class) {
                 this.setMachine2Available(false);
-                System.out.println(c.getCookNumber() + "got machine 2" + " " + new Date().getTime());
+                //System.out.println(c.getCookNumber() + "got machine 2" + " " + new Date().getTime());
                 Cook.class.wait(this.getMachine2WaitTime());
                 o.processingOrder("fries");
                 this.setMachine2Available(true);
-                System.out.println(c.getCookNumber() + "released machine 2" + " " + new Date().getTime());
+                //System.out.println(c.getCookNumber() + "released machine 2" + " " + new Date().getTime());
             }
         } catch (Exception e) {
 
@@ -156,11 +157,11 @@ public class MachineSingleton {
         try {
             synchronized (Cook.class) {
                 this.setMachine3Available(false);
-                System.out.println(c.getCookNumber() + "got machine 3" + " " + new Date().getTime());
+                //System.out.println(c.getCookNumber() + "got machine 3" + " " + new Date().getTime());
                 Cook.class.wait(this.machine3WaitTime);
                 o.processingOrder("coke");
                 this.setMachine3Available(true);
-                System.out.println(c.getCookNumber() + "released machine 3" + " " + new Date().getTime());
+                //System.out.println(c.getCookNumber() + "released machine 3" + " " + new Date().getTime());
             }
         } catch (Exception e) {
 

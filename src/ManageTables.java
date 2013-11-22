@@ -29,16 +29,16 @@ public class ManageTables {
             for (Table t : tableArrayList) {
                 if (t.isAvailable() == true) {
                     t.setAvailable(false);
-                    t.setCustomerNumber(diner.getCustomerNumber());
+                    t.setCustomerNumber(diner.getDinerNumber());
                     diner.gotTable(t);
                     return;
                 }
             }
 
-            if (diner.getTable() == null) {
-                diner.wait();
-                System.out.println(diner.getCustomerNumber() + " is waiting for a table");
-            }
+//            if (diner.getTable() == null) {
+//               // diner.wait();
+//                System.out.println(diner.getDinerNumber() + " is waiting for a table");
+//            }
 
 
         } catch (Exception e) {
@@ -52,13 +52,19 @@ public class ManageTables {
             for (Table t : tableArrayList) {
                 if (t.getTableNumber() == diner.getTable().getTableNumber())
                     t.setAvailable(true);
-                notify();
+
+                System.out.println("Diner " + diner.getDinerNumber() + " left table " + diner.getTable().getTableNumber()
+                + " at " + TimeManager.getCurrentTime());
+
+               // diner.notify();
                 break;
             }
         } catch (Exception e) {
 
         }
     }
+
+
 
 
 }

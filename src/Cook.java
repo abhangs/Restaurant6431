@@ -1,3 +1,6 @@
+import javax.print.attribute.standard.DateTimeAtCompleted;
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: bunkmaster
@@ -69,26 +72,33 @@ public class Cook extends Thread {
     @Override
     public void run() {
         super.run();
+        startProcessing();
+    }
+
+    public void startProcessing()
+    {
         while (true) {
             try {
                 //check if any order is present in the queue
                 if (manageOrders.getOrderArrayQueue().size() > 0) {
                     order = manageOrders.getOrder(0);
-                    System.out.println("Cook " + this.getCookNumber() + " got order for diner: " + order.getCustomerNumber());
+                    System.out.println("Cook " + this.getCookNumber() + " got order for diner: " + order.getCustomerNumber()
+                            + " at: " + TimeManager.getCurrentTime());
                     processOrder(order);
                 }
             } catch (Exception e) {
-                System.out.println("Error in getting order for cook: " + this.getCookNumber());
+                //System.out.println("Error in getting order for cook: " + this.getCookNumber());
             }
 
         }
     }
 
+
     //process the orders in this function
     public void processOrder(Order order) {
 
         try {
-            this.setCookAvailable(false);
+            //this.setCookAvailable(false);
             order.setCookNumber(this.getCookNumber());
             while (!order.isOrderDone()) {
                 if (!order.isBurgersDone()) {
@@ -175,15 +185,20 @@ public class Cook extends Thread {
                     }
                 }
 
-                if (order.isOrderDone()) {
-                    //need to do processing once order is finished
 
-                }
 
 
             }
         } catch (Exception e) {
-            System.out.println("\nError processing diner order");
+            //System.out.println("\nError processing diner order");
+        }
+
+        if (order.isOrderDone())
+        {
+            //need to do processing once order is finished
+            order.setSetOrderDone(true);
+            System.out.println("Cook "+ this.getCookNumber() + " has processed order of diner: "
+                    + order.getCustomerNumber() + " at: " + TimeManager.getCurrentTime() );
         }
 
     }

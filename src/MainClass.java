@@ -11,6 +11,8 @@ import java.util.Collections;
 public class MainClass {
 
     public static void main(String args[]) {
+
+        System.out.println("Program started at: " + TimeManager.getCurrentTime());
         Data data = PrepareData();
         InitiateThreads(data);
     }
@@ -74,7 +76,7 @@ public class MainClass {
         //set the machineSingleton object for each cook
 
         for (Cook c : data.getCookArrayList()) {
-            c.setCookNumber(i);
+            //c.setCookNumber(i);
             c.setMachineSingleton(MachineSingleton.getInstance());
             c.getMachineSingleton().setMachine1WaitTime(3000);
             c.getMachineSingleton().setMachine2WaitTime(2000);
@@ -97,20 +99,23 @@ public class MainClass {
 
         i = 1;
         for (Diner d : data.getDinerArrayList()) {
-            d.setDinerWaitTime(30000);
-            d.setCustomerNumber(i);
+            d.setDinerWaitTime(4000);
+            d.setDinerNumber(i);
             d.getOrder().setCustomerNumber(i);
             d.setManageTables(manageTables);
             d.setManageOrders(manageOrders);
+            d.setSeated(false);
+
             i++;
         }
 
         for (Diner d : data.getDinerArrayList()) {
-            d.run();
+            d.start();
         }
 
 
-        for (Cook c : data.getCookArrayList()) {
+        for (Cook c : data.getCookArrayList())
+        {
             c.start();
         }
 
