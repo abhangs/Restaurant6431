@@ -1,6 +1,3 @@
-import javax.print.attribute.standard.DateTimeAtCompleted;
-import java.util.Date;
-
 /**
  * Created with IntelliJ IDEA.
  * User: bunkmaster
@@ -83,7 +80,7 @@ public class Cook extends Thread {
 
                 if (manageOrders.getOrderArrayQueue().size() > 0) {
                     order = manageOrders.getOrder(0);
-                    System.out.println("Cook " + this.getCookNumber() + " got order for diner: " + order.getCustomerNumber()
+                    System.out.println("Cook " + this.getCookNumber() + " got order for diner: " + order.getDinerNumber()
                             + " at: " + TimeManager.getCurrentTime());
                     processOrder(order);
 

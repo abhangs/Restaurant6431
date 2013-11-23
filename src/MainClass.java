@@ -1,8 +1,7 @@
-import sun.nio.ch.ThreadPool;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.concurrent.*;
 
@@ -12,18 +11,18 @@ import java.util.concurrent.*;
  * Date: 11/9/13
  * Time: 2:19 PM
  * To change this template use File | Settings | File Templates.
- */
+        */
 public class MainClass {
 
-   static PriorityBlockingQueue<Diner> dinerPriorityBlockingQueue;
-
+   public static PriorityBlockingQueue<Diner> dinerPriorityQueue;
+   public static BlockingQueue<Table> tableBlockingQueue;
 
     public static void main(String args[])
     {
         try {
 
 
-            //dinerPriorityBlockingQueue = new PriorityBlockingQueue<Diner>(2,new DinerComparator());
+
 
             System.out.println("Program started at: " + TimeManager.getCurrentTime());
             Data data = PrepareData(args);
@@ -41,6 +40,7 @@ public class MainClass {
         data.setTableArrayList(new ArrayList<Table>());
         data.setCookArrayList(new ArrayList<Cook>());
 
+
         try
         {
             Scanner fileIn = new Scanner(new File("D:\\data1.txt"));
@@ -48,10 +48,13 @@ public class MainClass {
             data.setNumberOfTables(Integer.parseInt(fileIn.next()));
             data.setNumberOfCooks(Integer.parseInt(fileIn.next()));
 
+            tableBlockingQueue = new LinkedBlockingQueue<Table>(data.getNumberOfTables());
+            dinerPriorityQueue = new PriorityBlockingQueue<Diner>(data.getNumberOfDiners(),new DinerComparator());
+
             //now process each diner order and arrival time
             String tempString = "";
             String tempStringArray[] = new String[data.getNumberOfDiners()];
-            int key;
+            int key; int dinerNumberSeed;
             while (fileIn.hasNextLine())
             {
                 tempString+=" "+fileIn.nextLine();
@@ -60,12 +63,15 @@ public class MainClass {
             tempString = tempString.replaceAll("[\\s]+", " ");
             tempString = tempString.trim();
             tempStringArray = tempString.split(" ");
-            key=0;
+            key=0;  dinerNumberSeed = 0;
             while (key<tempStringArray.length)
             {
+                dinerNumberSeed++;
                 Diner diner = new Diner();
                 Order order = new Order();
+                diner.setDinerNumber(dinerNumberSeed);
                 diner.setArrivalTime(Integer.parseInt(tempStringArray[key]));
+                order.setDinerNumber(diner.getDinerNumber());
                 order.setBurgers(Integer.parseInt(tempStringArray[key + 1]));
                 order.setFries(Integer.parseInt(tempStringArray[key + 2]));
                 order.setCoke(Integer.parseInt(tempStringArray[key + 3]));
@@ -73,6 +79,7 @@ public class MainClass {
                 order.setIsFriesOrdered();
                 diner.setOrder(order);
                 data.getDinerArrayList().add(diner);
+                dinerPriorityQueue.add(diner);
                 key = key+4;
             }
         }
@@ -101,6 +108,7 @@ public class MainClass {
         for (int i = 1; i <= data.getNumberOfTables(); i++) {
             Table t = new Table(i, true);
             data.tableArrayList.add(t);
+            tableBlockingQueue.add(t);
         }
 
         //set the cooks
@@ -156,16 +164,16 @@ public class MainClass {
 
        Collections.sort(data.getDinerArrayList(), new DinerComparator());
 
-        i = 1;
+       // i = 1;
         for (Diner d : data.getDinerArrayList()) {
             d.setDinerWaitTime(4000);
-            d.setDinerNumber(i);
-            d.getOrder().setCustomerNumber(i);
+           // d.setDinerNumber(i);
+           // d.getOrder().setDinerNumber(i);
             d.setManageTables(manageTables);
             d.setManageOrders(manageOrders);
             d.setSeated(false);
 
-            i++;
+           // i++;
         }
 
 

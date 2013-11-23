@@ -7,7 +7,7 @@
  */
 public class Order {
 
-    int customerNumber;
+    int dinerNumber;
     int cookNumber;
 
     int burgers;
@@ -33,12 +33,12 @@ public class Order {
     }
 
 
-    public int getCustomerNumber() {
-        return customerNumber;
+    public int getDinerNumber() {
+        return dinerNumber;
     }
 
-    public void setCustomerNumber(int customerNumber) {
-        this.customerNumber = customerNumber;
+    public void setDinerNumber(int dinerNumber) {
+        this.dinerNumber = dinerNumber;
     }
 
     public int getCookNumber() {
@@ -100,7 +100,7 @@ public class Order {
     public Order(int customerNum, int cookNum, int burgers, int fries, int coke)
 
     {
-        this.customerNumber = customerNum;
+        this.dinerNumber = customerNum;
         this.cookNumber = cookNum;
         this.burgers = burgers;
         this.fries = fries;
@@ -110,7 +110,7 @@ public class Order {
     public Order(int customerNum, int burgers, int fries, int coke)
 
     {
-        this.customerNumber = customerNum;
+        this.dinerNumber = customerNum;
         this.cookNumber = 0;
         this.burgers = burgers;
         this.fries = fries;
@@ -120,7 +120,7 @@ public class Order {
     public Order(int burgers, int fries, int coke)
 
     {
-        this.customerNumber = 0;
+        this.dinerNumber = 0;
         this.cookNumber = 0;
         this.burgers = burgers;
         this.fries = fries;
@@ -149,7 +149,7 @@ public class Order {
 
     public Order()
     {
-        this.customerNumber = 0;
+        this.dinerNumber = 0;
         this.burgers = 0;
         this.fries = 0;
         this.coke = 0;

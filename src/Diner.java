@@ -157,12 +157,28 @@ public class Diner implements Runnable{
         {
             System.out.println("Diner Thread: " + this.dinerNumber + " has started at " + TimeManager.getCurrentTime());
 
-            while (!this.isSeated())
+//            while (!this.isSeated())
+//            {
+//                this.getManageTables().setCustomer(this);
+//            }
+//
+//            synchronized (Diner.class)
+//            {
+//            this.gotTable(this.getTable());
+//            }
+
+            while (true)
             {
-                this.getManageTables().setCustomer(this);
+                  if(MainClass.dinerPriorityQueue.peek().equals(this))
+                  {
+                       this.setTable(MainClass.tableBlockingQueue.take());
+                       break;
+                  }
+
             }
 
-            this.gotTable(this.getTable());
+            this.gotTable(this.table);
+            MainClass.dinerPriorityQueue.remove();
 
             while (!order.isSetOrderDone())
             {
@@ -172,7 +188,7 @@ public class Diner implements Runnable{
             synchronized (Diner.class)
             {
             System.out.println("Cook "+ this.order.getCookNumber() + " has processed order of diner: "
-                    + order.getCustomerNumber() + " at: " + TimeManager.getCurrentTime() );
+                    + order.getDinerNumber() + " at: " + TimeManager.getCurrentTime() );
             System.out.println("Diner " + this.getDinerNumber() + " started eating at: "+ TimeManager.getCurrentTime());
 
             }
@@ -183,7 +199,14 @@ public class Diner implements Runnable{
 //                wait(4000);
 //            }
 //
-          this.getManageTables().doneEating(this);
+            System.out.println("Diner " + this.dinerNumber+ " left table " + this.table.getTableNumber()
+                    + " at " + TimeManager.getCurrentTime());
+
+
+            MainClass.tableBlockingQueue.offer(this.getTable());
+
+             //this.getManageTables().doneEating(this);
+
         }
         catch (Exception e)
         {
