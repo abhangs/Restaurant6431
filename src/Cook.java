@@ -80,14 +80,16 @@ public class Cook extends Thread {
         while (true) {
             try {
                 //check if any order is present in the queue
+
                 if (manageOrders.getOrderArrayQueue().size() > 0) {
                     order = manageOrders.getOrder(0);
                     System.out.println("Cook " + this.getCookNumber() + " got order for diner: " + order.getCustomerNumber()
                             + " at: " + TimeManager.getCurrentTime());
                     processOrder(order);
+
                 }
             } catch (Exception e) {
-                //System.out.println("Error in getting order for cook: " + this.getCookNumber());
+               //System.out.println("Error in getting order for cook: " + this.getCookNumber());
             }
 
         }
@@ -197,8 +199,7 @@ public class Cook extends Thread {
         {
             //need to do processing once order is finished
             order.setSetOrderDone(true);
-            System.out.println("Cook "+ this.getCookNumber() + " has processed order of diner: "
-                    + order.getCustomerNumber() + " at: " + TimeManager.getCurrentTime() );
+
         }
 
     }

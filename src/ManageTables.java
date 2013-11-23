@@ -24,13 +24,19 @@ public class ManageTables {
     }
 
 
-    public synchronized void setCustomer(Diner diner) {
+    public  void setCustomer(Diner diner) {
+
+        synchronized (Diner.class)
+        {
         try {
+
             for (Table t : tableArrayList) {
                 if (t.isAvailable() == true) {
                     t.setAvailable(false);
                     t.setCustomerNumber(diner.getDinerNumber());
-                    diner.gotTable(t);
+                    diner.setTable(t);
+                    diner.setSeated(true);
+                   // diner.gotTable(t);
                     return;
                 }
             }
@@ -44,10 +50,14 @@ public class ManageTables {
         } catch (Exception e) {
 
         }
+        }
     }
 
     //implement code when diner is done eating
-    public synchronized void doneEating(Diner diner) {
+    public void doneEating(Diner diner) {
+
+        synchronized (Diner.class)
+        {
         try {
             for (Table t : tableArrayList) {
                 if (t.getTableNumber() == diner.getTable().getTableNumber())
@@ -61,6 +71,7 @@ public class ManageTables {
             }
         } catch (Exception e) {
 
+        }
         }
     }
 

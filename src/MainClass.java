@@ -1,5 +1,10 @@
+import sun.nio.ch.ThreadPool;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
+import java.util.concurrent.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,33 +15,87 @@ import java.util.Collections;
  */
 public class MainClass {
 
-    public static void main(String args[]) {
+   static PriorityBlockingQueue<Diner> dinerPriorityBlockingQueue;
 
-        System.out.println("Program started at: " + TimeManager.getCurrentTime());
-        Data data = PrepareData();
-        InitiateThreads(data);
+
+    public static void main(String args[])
+    {
+        try {
+
+
+            //dinerPriorityBlockingQueue = new PriorityBlockingQueue<Diner>(2,new DinerComparator());
+
+            System.out.println("Program started at: " + TimeManager.getCurrentTime());
+            Data data = PrepareData(args);
+            InitiateThreads(data);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //function to prepare the data from input file
-    public static Data PrepareData() {
-
-        //initially passing dummy data
+    public static Data PrepareData(String args[])
+    {
         Data data = new Data();
-        data.setNumberOfCooks(5);
-        data.setNumberOfDiners(10);
-        data.setNumberOfTables(5);
         data.setDinerArrayList(new ArrayList<Diner>());
         data.setTableArrayList(new ArrayList<Table>());
         data.setCookArrayList(new ArrayList<Cook>());
 
+        try
+        {
+            Scanner fileIn = new Scanner(new File("D:\\data1.txt"));
+            data.setNumberOfDiners(Integer.parseInt(fileIn.next()));
+            data.setNumberOfTables(Integer.parseInt(fileIn.next()));
+            data.setNumberOfCooks(Integer.parseInt(fileIn.next()));
+
+            //now process each diner order and arrival time
+            String tempString = "";
+            String tempStringArray[] = new String[data.getNumberOfDiners()];
+            int key;
+            while (fileIn.hasNextLine())
+            {
+                tempString+=" "+fileIn.nextLine();
+            }
+
+            tempString = tempString.replaceAll("[\\s]+", " ");
+            tempString = tempString.trim();
+            tempStringArray = tempString.split(" ");
+            key=0;
+            while (key<tempStringArray.length)
+            {
+                Diner diner = new Diner();
+                Order order = new Order();
+                diner.setArrivalTime(Integer.parseInt(tempStringArray[key]));
+                order.setBurgers(Integer.parseInt(tempStringArray[key + 1]));
+                order.setFries(Integer.parseInt(tempStringArray[key + 2]));
+                order.setCoke(Integer.parseInt(tempStringArray[key + 3]));
+                order.setIsCokeOrdered();
+                order.setIsFriesOrdered();
+                diner.setOrder(order);
+                data.getDinerArrayList().add(diner);
+                key = key+4;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error processing input file");
+        }
+
+        //initially passing dummy data
+
+//        data.setNumberOfCooks(5);
+//        data.setNumberOfDiners(10);
+//        data.setNumberOfTables(5);
+
+
 
         //set the diners
-        for (int i = 1; i <= data.getNumberOfDiners(); i++) {
+        /*for (int i = 1; i <= data.getNumberOfDiners(); i++) {
             //Note: Customer number is not set here!!!
             Order o = new Order(1, 1, 1);
             Diner d = new Diner(i + 30, o);
             data.dinerArrayList.add(d);
-        }
+        }*/
 
         //set the tables
         for (int i = 1; i <= data.getNumberOfTables(); i++) {
@@ -95,7 +154,7 @@ public class MainClass {
         //Note: Set the customer number here!!!
 
 
-        Collections.sort(data.getDinerArrayList(), new DinerComparator());
+       Collections.sort(data.getDinerArrayList(), new DinerComparator());
 
         i = 1;
         for (Diner d : data.getDinerArrayList()) {
@@ -109,15 +168,27 @@ public class MainClass {
             i++;
         }
 
-        for (Diner d : data.getDinerArrayList()) {
-            d.start();
+
+        ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolExecutor(data.getNumberOfDiners());
+
+        for(Diner d: data.getDinerArrayList())
+            scheduledExecutorService.schedule(d,d.getArrivalTime(), TimeUnit.SECONDS);
+
+        try {
+            for (Cook c : data.getCookArrayList())
+            {
+                c.start();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
 
-        for (Cook c : data.getCookArrayList())
-        {
-            c.start();
-        }
+//        for (Diner d : data.getDinerArrayList()) {
+//            d.start();
+//        }
+
+
 
 
     }

@@ -131,6 +131,29 @@ public class Order {
             isCokeOrdered = true;
     }
 
+    public void setIsFriesOrdered()
+    {
+        if (fries > 0)
+            isFriesOrdered = true;
+        else
+            isFriesOrdered = false;
+    }
+
+    public void setIsCokeOrdered()
+    {
+        if (coke > 0)
+            isCokeOrdered = true;
+        else
+            isCokeOrdered = false;
+    }
+
+    public Order()
+    {
+        this.customerNumber = 0;
+        this.burgers = 0;
+        this.fries = 0;
+        this.coke = 0;
+    }
 
     //check if fries are ordered
     public Boolean isFries()

@@ -5,7 +5,7 @@
  * Time: 2:34 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Diner extends Thread {
+public class Diner implements Runnable{
 
     private int dinerNumber;
     private int arrivalTime;
@@ -101,17 +101,21 @@ public class Diner extends Thread {
 
     }
 
+    public Diner()
+    {}
+
 
     //invoke this function when customer gets table and pass on the order to a common buffer
     public void gotTable(Table table) {
         try {
             //put the order in the queue, the dinerNumber for the order is set in InitiateThreads function
             this.table = table;
-            this.manageOrders.putOrder(order);
-            this.setSeated(true);
             System.out.println(this.dinerNumber + " has got table " + this.table.getTableNumber() +
                     " and set the order: burgers:  " + order.burgers + " fries: " + order.fries + " coke: " + order.coke
-            + " at: " + TimeManager.getCurrentTime());
+                    + " at: " + TimeManager.getCurrentTime());
+            this.manageOrders.putOrder(order);
+            this.setSeated(true);
+
         } catch (Exception e) {
             System.out.println("Error in setting the order");
         }
@@ -137,34 +141,49 @@ public class Diner extends Thread {
 
     }
 
-    @Override
-    public synchronized void start() {
-        super.start();
-        System.out.println("Diner Thread: " + this.dinerNumber + " has started at " + TimeManager.getCurrentTime());
+    //@Override
+//    public synchronized void start() {
+//        //super.start();
+//        System.out.println("Diner Thread: " + this.dinerNumber + " has started at " + TimeManager.getCurrentTime());
+//
+//    }
 
-    }
 
-
-    @Override
+    //@Override
     public void run()
     {
-        super.run();
+        //super.run();
         try
         {
+            System.out.println("Diner Thread: " + this.dinerNumber + " has started at " + TimeManager.getCurrentTime());
 
             while (!this.isSeated())
             {
                 this.getManageTables().setCustomer(this);
             }
 
+            this.gotTable(this.getTable());
+
             while (!order.isSetOrderDone())
             {
-               //wait();
-            }
-            System.out.println("Diner " + this.getDinerNumber() + " started eating at: "+ TimeManager.getCurrentTime());
-            Thread.sleep(4000);
-            this.getManageTables().doneEating(this);
 
+            }
+
+            synchronized (Diner.class)
+            {
+            System.out.println("Cook "+ this.order.getCookNumber() + " has processed order of diner: "
+                    + order.getCustomerNumber() + " at: " + TimeManager.getCurrentTime() );
+            System.out.println("Diner " + this.getDinerNumber() + " started eating at: "+ TimeManager.getCurrentTime());
+
+            }
+            Thread.sleep(4000);
+//
+//            synchronized (this)
+//            {
+//                wait(4000);
+//            }
+//
+          this.getManageTables().doneEating(this);
         }
         catch (Exception e)
         {

@@ -11,7 +11,7 @@ public class ManageOrders {
     //This class represents a common buffer to add and remover orders from a queue, orders to be added by customers and orders to be removed by cooks
     ArrayQueue<Order> orderArrayQueue;
 
-    public ArrayQueue<Order> getOrderArrayQueue() {
+    public synchronized ArrayQueue<Order> getOrderArrayQueue() {
         return orderArrayQueue;
     }
 
